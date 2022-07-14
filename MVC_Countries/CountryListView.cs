@@ -15,16 +15,13 @@ namespace MVC_Countries
         {
             this.Countries = Countries;
         }
-
         //methods
         public void Display()
         {
-
             for (int i = 0; i < Countries.Count; i++)
             {
                 Console.WriteLine($"{i}. {Countries[i].Name}");
             }
-
         }
     }
 }

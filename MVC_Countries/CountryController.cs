@@ -19,17 +19,11 @@ namespace MVC_Countries
             new Country("Austrialia ","Australia", new List<string> { "Red","White","Blue"}),
             new Country("Russia", "Europe", new List<string> {"white", "blue", "red"}),
             new Country("United Kingdom","Europe", new List<string> { "Blue", "White", "Red" }),
-
-
-
-
-
         };
         //constructor
         public CountryController()
         {
         }
-
         //methods
         public void CountryAction(Country c)
         {

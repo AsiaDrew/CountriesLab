@@ -9,14 +9,13 @@ namespace MVC_Countries
 {
     internal class CountryView
     {
+        //properties
         public Country DisplayCountry { get; set; }
-
         //constructor
         public CountryView(Country DisplayCountry)
         {
             this.DisplayCountry = DisplayCountry;
         }
-
         //methods
         public void Display()
         {
@@ -24,14 +23,11 @@ namespace MVC_Countries
             Console.WriteLine("Flag Colors:");
             foreach (string c in DisplayCountry.Colors)
             {
-                // TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
                 string color = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(c);
-
                 Console.ForegroundColor = Enum.Parse<ConsoleColor>(color);
                 if (color == "Black")
                 {
                     Console.BackgroundColor = ConsoleColor.White;
-
                 }
                 Console.WriteLine($"{c}");
                 Console.ResetColor();
