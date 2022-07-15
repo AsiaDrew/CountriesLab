@@ -12,14 +12,14 @@ namespace MVC_Countries
         //properties
         public Country DisplayCountry { get; set; }
         //constructor
-        public CountryView(Country DisplayCountry)
+        public CountryView(Country _DisplayCountry)
         {
-            this.DisplayCountry = DisplayCountry;
+            DisplayCountry = _DisplayCountry;
         }
         //methods
         public void Display()
         {
-            Console.WriteLine($"Country Display\nName: {DisplayCountry.Name}\nContinent: {DisplayCountry.Continent}");
+            Console.WriteLine($"COUNTRY DISPLAY\nName: {DisplayCountry.Name}\nContinent: {DisplayCountry.Continent}");
             Console.WriteLine("Flag Colors:");
             foreach (string c in DisplayCountry.Colors)
             {
@@ -29,7 +29,7 @@ namespace MVC_Countries
                 {
                     Console.BackgroundColor = ConsoleColor.White;
                 }
-                Console.WriteLine($"{c}");
+                Console.WriteLine(c);
                 Console.ResetColor();
             }
         }

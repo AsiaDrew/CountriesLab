@@ -11,9 +11,9 @@ namespace MVC_Countries
         //properties
         public List<Country> Countries { get; set; }
         //constructor
-        public CountryListView(List<Country> Countries)
+        public CountryListView(List<Country> _Countries)
         {
-            this.Countries = Countries;
+            Countries = _Countries;
         }
         //methods
         public void Display()
